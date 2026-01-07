@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.vue.ChambresFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/ll_header_recherche"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <TextView
+                android:id="@+id/titreDetailsChambre"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@color/primary"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:text="@string/trouvez_la_chambre_ideale"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reserver_de"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/btn_date_debut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:hint="@string/cliquez_ici"
+                    style="?android:spinnerStyle"
+                    android:backgroundTint="@color/primary"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/To"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/btn_date_fin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:hint="@string/date_de_fin"
+                    style="?android:spinnerStyle" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prix_maximum"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_prix_maximum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:hint="Maximum"
+                    android:inputType="numberSigned"
+                    android:textAlignment="center" />
+
+                <ImageView
+                    android:id="@+id/btn_refresh_prix"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    app:tint="@color/primary"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/refresh_icon" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/loadChambresAccueil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⟳"
+            android:textSize="36sp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_chambres"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+        <LinearLayout
+            android:id="@+id/bottom_banner"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="@color/primary"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/home_icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/home_icon"
+                app:tint="@color/white"
+                android:contentDescription="Home"
+                android:padding="8dp"/>
+
+            <ImageView
+                android:id="@+id/vers_historique_reservation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/history_icon"
+                android:contentDescription="Save"
+                android:padding="8dp"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.vue.FormulaireReservationsFragment">
+
+    <LinearLayout
+        android:id="@+id/header_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnRetour"
+            android:layout_width="28dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/primary"
+            android:src="@drawable/previous_icon"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@color/primary"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="@string/reservation_pour"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvNbPersonnes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="65dp"
+        android:text="@string/nbr_personnesForm"
+        android:textColor="@color/black"
+        android:textColorLink="#0F0F0F"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnConfirmerReservation"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/bottom_banner"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@color/primary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/home_icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Home"
+            android:padding="8dp"
+            android:src="@drawable/home_icon" />
+
+        <ImageView
+            android:id="@+id/save_icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Save"
+            android:padding="8dp"
+            android:src="@drawable/history_icon" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnConfirmerReservation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/primary"
+        android:text="@string/confirmer_la_reservation"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDatesChoisis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="⟳"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnConfirmerReservation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_section"
+        app:layout_constraintVertical_bias="0.474" />
+
+    <Spinner
+        android:id="@+id/spinnerNbPersonnes"
+        android:layout_width="104dp"
+        android:layout_height="23dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNbPersonnes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvNbPersonnes"
+        app:layout_constraintTop_toTopOf="@+id/tvNbPersonnes" />
+
+    <Button
+        android:id="@+id/btnModifierDates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="@color/primary"
+        android:text="@string/modifier_dates_reservation"
+        app:layout_constraintBottom_toTopOf="@+id/tvDatesChoisis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_section"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <TextView
+        android:id="@+id/tvPrixParPersonnes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="⟳"
+        app:layout_constraintBottom_toTopOf="@+id/btnConfirmerReservation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

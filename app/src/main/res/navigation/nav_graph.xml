@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/ecran_liste_chambres">
+
+    <fragment
+        android:id="@+id/ecran_liste_chambres"
+        android:name="com.leen.hotelres_app.presentation.vue.ChambresFragment"
+        tools:layout="@layout/fragment_chambres"
+        >
+        <action
+            android:id="@+id/action_ecran_liste_chambres_to_ecran_details_chambre"
+            app:destination="@id/ecran_details_chambre" />
+        <action
+            android:id="@+id/action_ecran_liste_chambres_to_ecran_historique_reservations"
+            app:destination="@id/ecran_historique_reservations" />
+    </fragment>
+    <fragment
+        android:id="@+id/ecran_details_chambre"
+        android:name="com.leen.hotelres_app.presentation.vue.DetailChambreFragment"
+        android:label="fragment_detail_chambre"
+        tools:layout="@layout/fragment_details_chambre" >
+        <action
+            android:id="@+id/action_ecran_details_chambre_to_ecran_reservation_chambre"
+            app:destination="@id/ecran_reservation_chambre" />
+        <action
+            android:id="@+id/action_ecran_details_chambre_to_ecran_liste_chambres"
+            app:destination="@id/ecran_liste_chambres" />
+        <action
+            android:id="@+id/action_ecran_details_chambre_to_ecran_historique_reservations"
+            app:destination="@id/ecran_historique_reservations" />
+    </fragment>
+    <fragment
+        android:id="@+id/ecran_reservation_chambre"
+        android:name="com.leen.hotelres_app.presentation.vue.FormulaireReservationsFragment"
+        android:label="fragment_formulaire_reservations"
+        tools:layout="@layout/fragment_formulaire_reservation" >
+        <action
+            android:id="@+id/action_ecran_reservation_chambre_to_ecran_liste_chambres"
+            app:destination="@id/ecran_liste_chambres" />
+        <action
+            android:id="@+id/action_ecran_reservation_chambre_to_ecran_historique_reservations"
+            app:destination="@id/ecran_historique_reservations" />
+        <action
+            android:id="@+id/action_ecran_reservation_chambre_to_ecran_details_chambre"
+            app:destination="@id/ecran_details_chambre" />
+    </fragment>
+    <fragment
+        android:id="@+id/ecran_historique_reservations"
+        android:name="com.leen.hotelres_app.presentation.vue.HistoriqueReservationsFragment"
+        android:label="fragment_historique_reservation"
+        tools:layout="@layout/fragment_historique_reservations" >
+        <action
+            android:id="@+id/action_ecran_historique_reservations_to_ecran_liste_chambres"
+            app:destination="@id/ecran_liste_chambres" />
+    </fragment>
+</navigation>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.vue.DetailChambreFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Details_Chambre">
+
+        <Button
+            android:id="@+id/btnReserverChambre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="35dp"
+            android:backgroundTint="@color/primary"
+            android:text="@string/details_chambre_reserver_prix_nuit"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_banner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/titreDetailsChambre"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@color/primary"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:text="@string/details_chambre_titre"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNbPersonneDetailsChambre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/detail_chambre_nb_personnes"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titreDetailsChambre"
+            tools:text="Chambre pour X personne(s)" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/carouselPhotosRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNbPersonneDetailsChambre" />
+
+        <TextView
+            android:id="@+id/tvDescriptionDetailsChambre"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/carouselPhotosRecyclerView"
+            tools:text="Une chambre parfaite pour la famille avec de l'espace et un canapé réversible pour les invités" />
+
+        <LinearLayout
+            android:id="@+id/bottom_banner"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@color/primary"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/home_icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="Home"
+                android:padding="8dp"
+                android:src="@drawable/home_icon" />
+
+            <ImageView
+                android:id="@+id/save_icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="Save"
+                android:padding="8dp"
+                android:src="@drawable/history_icon" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvNombreLitsDetailsChambre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/details_chambre_nombre_de_lits"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/carouselPhotosRecyclerView"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescriptionDetailsChambre" />
+
+        <TextView
+            android:id="@+id/tvInclusDetailsChambre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/details_chambre_inclusion"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/tvNombreLitsDetailsChambre"
+            app:layout_constraintTop_toBottomOf="@+id/tvNombreLitsDetailsChambre" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

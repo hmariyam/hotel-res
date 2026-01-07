@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name" translatable="false">HotelRes_App</string>
+    <string name="nombre_de_personnes">Nombre de personnes: %1$d</string>
+    <string name="date_de_reservation">Date de réservation: %1$s</string>
+    <string name="prix_nuit">Prix: %1$s$</string>
+    <string name="choissisez_vos_dates_de_reservation">Choissisez vos dates de réservation</string>
+    <string name="aucun_changement_au_prix">Aucun changement au prix</string>
+    <string name="le_prix_augmente_de">Le prix augmente de %1$s</string>
+    <string name="details_de_la_chambre">Détails de la chambre %1$s</string>
+    <string name="inclus">Inclus:</string>
+    <string name="historique_des_reservations">Historique des réservations</string>
+    <string name="aucune_historique_afficher">Aucune historique à afficher.</string>
+    <string name="reservation_confirmee">Réservation confirmée !</string>
+    <string name="dates_reservationForm">Date de réservation: %1$s au %2$s</string>
+    <string name="reservation_pour">Réservation pour: %1$s</string>
+    <string name="confirmer_la_reservation">Confirmer la réservation</string>
+    <string name="modifier_dates_reservation">Modifier vos dates de réservation</string>
+    <string name="nbr_personnesForm">Nombre de personnes :</string>
+    <string name="trouvez_la_chambre_ideale">Trouvez la chambre idéale</string>
+    <string name="reserver_de">Réserver de:</string>
+    <string name="cliquez_ici">Cliquez ici</string>
+    <string name="To">À:</string>
+    <string name="date_de_fin">Date de fin</string>
+    <string name="prix_maximum">Prix maximum:</string>
+    <string name="nombre_de_lits">Nombre de lits: %1$s</string>
+    <string name="reserverNuit_details">Réserver - %1$s$ / nuit</string>
+    <string name="details_chambre_titre">Détails de la chambre %1$s</string>
+    <string name="detail_chambre_nb_personnes">Chambre pour %1$d personne(s)</string>
+    <string name="details_chambre_reserver_prix_nuit">Réserver %1$s$/nuit</string>
+    <string name="details_chambre_nombre_de_lits">Nombre de lits: %1$d</string>
+    <string name="details_chambre_inclusion">Inclus: %1$s</string>
+    <string name="historique_reservation_titre">Réservation de la chambre %1$s</string>
+    <string name="reservation_erreur">Erreur lors de l\'enregistrement de la réservation</string>
+</resources>
